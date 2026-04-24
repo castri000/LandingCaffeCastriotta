@@ -1,0 +1,33 @@
+@layer theme {
+  :root {
+    /* Spacing Scale */
+    --spacing-0: 0px;
+    --spacing-1: 4px;
+    --spacing-2: 8px;
+    --spacing-6: 32px;
+    --spacing-7: 40px;
+    --spacing-10: 80px;
+
+    /* Unit Scale */
+    --unit-24: 24px;
+    --unit-48: 48px;
+    --unit-64: 64px;
+    --unit-72: 72px;
+    --unit-80: 80px;
+    --unit-160: 160px;
+
+    /* Figma variable format fallback */
+    --spacing/0: 0px;
+    --spacing/1: 4px;
+    --spacing/2: 8px;
+    --spacing/6: 32px;
+    --spacing/7: 40px;
+    --spacing/10: 80px;
+    --unit/24: 24px;
+    --unit/48: 48px;
+    --unit/64: 64px;
+    --unit/72: 72px;
+    --unit/80: 80px;
+    --unit/160: 160px;
+  }
+}

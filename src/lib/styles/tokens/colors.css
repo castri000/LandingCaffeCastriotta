@@ -1,0 +1,23 @@
+@layer theme {
+  :root {
+    /* Brand Colors - LAPATISSERIE Sunset */
+    --brand-800: #89593c;
+    --brand-600: #cba98a;
+
+    /* Background */
+    --color-background-primary: #1b1b1b;
+
+    /* Content */
+    --color-content-primary: #f6f6f6;
+
+    /* Links */
+    --color-link-default: #f6f6f6;
+
+    /* Fallback for Figma variables */
+    --brand/800: #89593c;
+    --brand/600: #cba98a;
+    --color/background/primary: #1b1b1b;
+    --color/content/primary: #f6f6f6;
+    --color/link/default: #f6f6f6;
+  }
+}

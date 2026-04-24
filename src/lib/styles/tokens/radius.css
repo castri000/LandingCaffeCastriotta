@@ -1,0 +1,9 @@
+@layer theme {
+  :root {
+    /* Border Radius */
+    --radius-xl: 32px;
+
+    /* Figma variable format fallback */
+    --radius/xl: 32px;
+  }
+}
