@@ -4,6 +4,6 @@
     --radius-xl: 32px;
 
     /* Figma variable format fallback */
-    --radius/xl: 32px;
+    --radius-xl: 32px;
   }
 }
