@@ -23,28 +23,28 @@
 <style>
   .text-image-section {
     display: flex;
-    gap: var(--spacing/7);
+    gap: var(--spacing-10);
     align-items: center;
     justify-content: center;
-    padding: var(--unit/80) var(--spacing/10);
+    padding: var(--spacing-7) var(--spacing-7);
     width: 100%;
     box-sizing: border-box;
   }
 
   .text-content {
     flex: 0 0 auto;
-    width: 748px;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    gap: var(--spacing/6);
+    gap: var(--spacing-7);
     justify-content: center;
   }
 
   .section-heading {
     font-family: var(--font-primary);
     font-weight: 700;
-    font-size: var(--unit/72);
-    color: white;
+    font-size: var(--unit-72);
+    color: var(--color-content-primary);
     margin: 0;
     line-height: 1.2;
   }
@@ -52,18 +52,18 @@
   .section-subheading {
     font-family: var(--font-primary);
     font-weight: 500;
-    font-size: var(--unit/48);
-    color: white;
+    font-size: var(--unit-48);
+    color: var(--color-content-primary);
     margin: 0;
     line-height: 1.2;
   }
 
   .section-description {
     font-family: var(--font-primary);
-    font-weight: 400;
-    font-size: 24px;
-    color: white;
-    line-height: 1.6;
+    font-weight: 300;
+    font-size: var(--unit-24);
+    color: var(--color-content-primary);
+    line-height: 1.4;
     text-align: justify;
     margin: 0;
     max-width: 704px;

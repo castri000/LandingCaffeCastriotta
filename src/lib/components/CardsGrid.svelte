@@ -31,7 +31,7 @@
     gap: 23px;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing/7) 0;
+    padding: var(--spacing-7) var(--spacing-7);
     width: 100%;
     box-sizing: border-box;
   }

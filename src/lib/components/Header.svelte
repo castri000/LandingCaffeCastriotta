@@ -8,14 +8,14 @@
 <div class="header">
   <div class="header-content">
     <h1 class="header-title">{title}</h1>
-    {#if videoUrl}
-      <div class="video-container">
+    <div class="video-container">
+      {#if videoUrl}
         <video controls class="video-player">
           <source src={videoUrl} type="video/mp4" />
           Il tuo browser non supporta il tag video.
         </video>
-      </div>
-    {/if}
+      {/if}
+    </div>
   </div>
 </div>
 
@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--unit/160) var(--spacing/10);
+    padding: var(--spacing-7) var(--spacing-7);
     width: 100%;
     box-sizing: border-box;
     min-height: 400px;
@@ -34,15 +34,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing/6);
+    gap: var(--spacing-7);
     width: 100%;
     max-width: 1200px;
   }
 
   .header-title {
-    font-family: var(--font-secondary);
+    font-family: var(--font-primary);
     font-weight: 700;
-    font-size: var(--unit/80);
+    font-size: var(--unit-80);
     color: var(--color-content-primary);
     text-align: center;
     margin: 0;
@@ -52,12 +52,30 @@
 
   .video-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 100%;
     aspect-ratio: 16 / 9;
     border-radius: var(--radius-xl);
     overflow: hidden;
     background: var(--brand-800);
-    border: 2px solid var(--brand-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .video-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--brand-800) 0%, #6b4329 100%);
+  }
+
+  .play-icon {
+    width: 80px;
+    height: 80px;
+    color: var(--brand-600);
+    opacity: 0.7;
   }
 
   .video-player {

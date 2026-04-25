@@ -13,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--unit/160) var(--unit/80);
+    padding: var(--spacing-10) var(--spacing-10);
     width: 100%;
     box-sizing: border-box;
     min-height: 328px;
@@ -21,8 +21,8 @@
 
   .quote-text {
     font-family: var(--font-primary);
-    font-weight: 700;
-    font-size: var(--unit/48);
+    font-weight: 500;
+    font-size: var(--unit-48);
     color: var(--color-content-primary);
     text-align: center;
     line-height: 1.4;

@@ -50,7 +50,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing/10);
+    padding: var(--spacing-10);
     box-sizing: border-box;
     z-index: 1;
   }
@@ -78,7 +78,7 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
-    padding: var(--spacing/10);
+    padding: var(--spacing-10);
     box-sizing: border-box;
     z-index: 2;
     transition: transform 0.3s ease;
@@ -115,7 +115,7 @@
   .card-title {
     font-family: var(--font-secondary);
     font-weight: 700;
-    font-size: var(--unit/64);
+    font-size: var(--unit-64);
     color: black;
     margin: 0;
     line-height: 1;

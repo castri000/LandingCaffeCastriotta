@@ -52,7 +52,7 @@
     imageUrl={imgImgDefault}
   />
 
-  <QuoteSection quote="Scopri il gusto, la cura e la passione che mettiamo in ogni miscela: un percorso fatto di aromi, qualità e piccoli momenti da condividere." />
+  <QuoteSection quote='"Scopri il gusto, la cura e la passione che mettiamo in ogni miscela: un percorso fatto di aromi, qualità e piccoli momenti da condividere."' />
 
   <CardsGrid cards={productCards} />
 
