@@ -1,13 +1,19 @@
 <script lang="ts">
+  let isFlipped = $state(false);
+
   const { title = '', subtitle = '', description = '', imageUrl = '' } = $props<{
     title?: string;
     subtitle?: string;
     description?: string;
     imageUrl?: string;
   }>();
+
+  function handleClick() {
+    isFlipped = !isFlipped;
+  }
 </script>
 
-<button class="card">
+<button class="card" class:flipped={isFlipped} onclick={handleClick}>
   <div class="card-back">
     <div class="card-description">
       <p>{description}</p>
@@ -32,14 +38,10 @@
     border: none;
     border-radius: var(--radius-xl);
     cursor: pointer;
-    overflow: hidden;
     background: transparent;
     padding: 0;
-    transition: transform 0.3s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-4px);
+    perspective: 1000px;
+    transform-style: preserve-3d;
   }
 
   .card-back {
@@ -53,18 +55,25 @@
     padding: var(--spacing-10);
     box-sizing: border-box;
     z-index: 1;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transform: rotateY(180deg);
+    transition: transform 1s ease;
+  }
+
+  .card.flipped .card-back {
+    transform: rotateY(0deg);
   }
 
   .card-description {
     width: 100%;
     text-align: left;
-    transform: scaleY(-1) rotateY(180deg);
   }
 
   .card-description p {
-    font-family: var(--font-secondary);
+    font-family: var(--font-primary);
     font-weight: 400;
-    font-size: 24px;
+    font-size: var(--unit-24);
     color: var(--color-content-primary);
     line-height: 1.5;
     margin: 0;
@@ -75,31 +84,37 @@
     inset: 0;
     background: var(--brand-600);
     border-radius: var(--radius-xl);
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: var(--spacing-10);
+    padding: 0;
     box-sizing: border-box;
     z-index: 2;
-    transition: transform 0.3s ease;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 1s ease;
   }
 
-  .card:hover .card-front {
-    transform: rotateY(180deg) scaleX(-1);
+  .card.flipped .card-front {
+    transform: rotateY(180deg);
   }
 
   .card-image {
     position: absolute;
-    top: -40px;
-    right: 20px;
-    width: 300px;
-    height: auto;
+    width: 50%;
+    height: 100%;
     object-fit: contain;
     pointer-events: none;
+    top: 0;
+    left: 0;
   }
+  
 
   .card-content {
-    position: relative;
+    position: absolute;
+    bottom: var(--spacing-6);
+    right: var(--spacing-6);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+    align-items: flex-end;
     z-index: 3;
   }
 

@@ -14,7 +14,7 @@
 </script>
 
 <div class="cards-grid">
-  {#each cards as card, index}
+  {#each cards as card}
     <ProductCard
       title={card.title}
       subtitle={card.subtitle}

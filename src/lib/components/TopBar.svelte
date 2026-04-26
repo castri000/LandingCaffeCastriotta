@@ -29,12 +29,12 @@
     font-size: 24px;
     color: var(--color-content-primary);
     white-space: nowrap;
-    padding: var(--spacing-7) var(--spacing-7);
+    padding: var(--spacing-7) var(--spacing-10);
   }
 
   .nav-links {
     display: flex;
-    gap: var(--spacing-7);
+    gap: var(--spacing-0);
     align-items: center;
   }
 
@@ -44,7 +44,7 @@
     font-size: 24px;
     color: var(--color-link-default);
     text-decoration: none;
-    padding: var(--spacing-7) var(--spacing-7);
+    padding: var(--spacing-7) var(--spacing-10);
     transition: opacity 0.2s ease;
   }
 

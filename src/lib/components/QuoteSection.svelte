@@ -21,7 +21,7 @@
 
   .quote-text {
     font-family: var(--font-primary);
-    font-weight: 500;
+    font-weight: 700;
     font-size: var(--unit-48);
     color: var(--color-content-primary);
     text-align: center;

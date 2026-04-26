@@ -1,9 +1,8 @@
 <script lang="ts">
-  const { heading = '', subheading = '', description = '', imageUrl = '' } = $props<{
+  const { heading = '', subheading = '', description = '' } = $props<{
     heading?: string;
     subheading?: string;
     description?: string;
-    imageUrl?: string;
   }>();
 </script>
 
@@ -14,9 +13,7 @@
     <p class="section-description">{description}</p>
   </div>
   <div class="image-content">
-    {#if imageUrl}
-      <img src={imageUrl} alt={heading} class="section-image" />
-    {/if}
+    <slot />
   </div>
 </section>
 
@@ -71,15 +68,5 @@
 
   .image-content {
     flex: 0 0 auto;
-    width: 368px;
-    height: 480px;
-  }
-
-  .section-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: var(--radius-xl);
-    display: block;
   }
 </style>
