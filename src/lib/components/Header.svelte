@@ -7,8 +7,8 @@
 
 <div class="header">
   <div class="header-content">
-    <h1 class="header-title">{title}</h1>
     <div class="video-container">
+    <h1 class="header-title">{title}</h1>
       {#if videoUrl}
         <video controls class="video-player" src="/videos/video caffe 3.mp4" autoplay muted loop playsinline></video>
       {/if}
@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-7) var(--spacing-7);
+    padding: var(--spacing-7) var(--spacing-10);
     width: 100%;
     box-sizing: border-box;
     min-height: 400px;
@@ -33,7 +33,6 @@
     align-items: center;
     gap: var(--spacing-7);
     width: 100%;
-    max-width: 1200px;
   }
 
   .header-title {
