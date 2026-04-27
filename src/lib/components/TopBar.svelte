@@ -1,15 +1,28 @@
 <script lang="ts">
-  const { device = 'Desktop' } = $props<{
-  device?: 'Desktop' | 'Mobile';
-}>();
+  let activeLink = $state<'selezione' | 'about' | null>(null);
 
+  function handleClick(link: 'selezione' | 'about') {
+    activeLink = activeLink === link ? null : link;
+  }
 </script>
 
 <div class="topbar">
   <div class="logo">CF</div>
   <nav class="nav-links">
-    <a href="#selezione" class="nav-link">SELEZIONE</a>
-    <a href="#about" class="nav-link">ABOUT</a>
+    <button 
+      class="nav-link" 
+      class:active={activeLink === 'selezione'}
+      onclick={() => handleClick('selezione')}
+    >
+      SELEZIONE
+    </button>
+    <button 
+      class="nav-link" 
+      class:active={activeLink === 'about'}
+      onclick={() => handleClick('about')}
+    >
+      ABOUT
+    </button>
   </nav>
 </div>
 
@@ -44,11 +57,34 @@
     font-size: 24px;
     color: var(--color-link-default);
     text-decoration: none;
-    padding: var(--spacing-7) var(--spacing-10);
-    transition: opacity 0.2s ease;
+    padding: var(--spacing-2) var(--spacing-6);
+    right: var(--spacing-7);
+    transition: all 0.3s ease;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    border-radius: var(--radius-xl);
   }
 
   .nav-link:hover {
     color: var(--color-link-hover);
+  }
+
+  .nav-link.active {
+    background: var(--brand-600);
+    color: white;
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-2) var(--spacing-6);
+    animation: slideIn 0.3s ease;
+  }
+
+  @keyframes slideIn {
+    from {
+      opacity: 0.7;
+    }
+    to {
+      opacity: 1;
+    }
   }
 </style>

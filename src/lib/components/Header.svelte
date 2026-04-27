@@ -10,10 +10,7 @@
     <h1 class="header-title">{title}</h1>
     <div class="video-container">
       {#if videoUrl}
-        <video controls class="video-player">
-          <source src={videoUrl} type="video/mp4" />
-          Il tuo browser non supporta il tag video.
-        </video>
+        <video controls class="video-player" src="/videos/video caffe 3.mp4" autoplay muted loop playsinline></video>
       {/if}
     </div>
   </div>
@@ -62,25 +59,24 @@
     justify-content: center;
   }
 
-  .video-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--brand-800) 0%, #6b4329 100%);
-  }
-
-  .play-icon {
-    width: 80px;
-    height: 80px;
-    color: var(--brand-600);
-    opacity: 0.7;
-  }
-
   .video-player {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    pointer-events: none;
+  }
+
+
+  /* Nascondi i controlli del video */
+  .video-player::-webkit-media-controls {
+  display: none !important;
+  }
+
+  .video-player::-webkit-media-controls-enclosure {
+  display: none !important;
+  }
+
+  .video-player::-webkit-media-controls-panel {
+  display: none !important;
   }
 </style>
