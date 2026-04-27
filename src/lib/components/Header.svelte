@@ -52,7 +52,7 @@
     aspect-ratio: 16 / 9;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    background: var(--brand-800);
+    background-color: var(--brand-800);
     display: flex;
     align-items: center;
     justify-content: center;

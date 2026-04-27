@@ -20,25 +20,29 @@
       title: 'Caffe',
       subtitle: 'ESPRESSO',
       description: "L'espresso è l'essenza del caffè italiano: intenso, concentrato, immediato. In pochi secondi sprigiona aromi profondi e una crema dorata che racconta tutta la sua forza. Il gesto quotidiano che risveglia, accompagna e mette in pausa.",
-      imageUrl: imgCoffeeIcon4
+      imageUrl: imgCoffeeIcon4,
+      side: "left"
     },
     {
       title: 'Caffe',
       subtitle: 'CAPPUCCINO',
       description: 'Il cappuccino è equilibrio: l\'abbraccio tra espresso e latte montato che crea una morbidezza unica. Cremoso, rotondo, avvolgente, è il simbolo delle mattine italiane e del piacere lento di un inizio giornata fatto bene.',
-      imageUrl: imgCoffeeIcon3
+      imageUrl: imgCoffeeIcon3,
+      side: "right"
     },
     {
       title: 'Caffe',
       subtitle: 'ICE LATTE',
       description: 'Fresco, leggero e vellutato, l\'ice latte unisce espresso e latte freddo con ghiaccio. La versione estiva del comfort: rinfrescante e con carattere, perfetto per chi vuole gusto e freschezza in un solo sorso.',
-      imageUrl: imgCoffeeIcon2
+      imageUrl: imgCoffeeIcon2,
+      side: "left"
     },
     {
       title: 'Caffe',
       subtitle: 'CREMA',
       description: 'La crema caffè è un piccolo dessert in tazza: soffice, fredda e irresistibile. Un mix di espresso e panna montata che diventa una mousse leggera, ideale quando vuoi qualcosa di dolce senza esagerare.',
-      imageUrl: imgCoffeeIcon1
+      imageUrl: imgCoffeeIcon1,
+      side: "right"
     }
   ];
 </script>

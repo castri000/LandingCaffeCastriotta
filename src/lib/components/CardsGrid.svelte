@@ -20,6 +20,7 @@
       subtitle={card.subtitle}
       description={card.description}
       imageUrl={card.imageUrl}
+      side={card.side}
     />
   {/each}
 </div>

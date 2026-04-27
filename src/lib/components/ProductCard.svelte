@@ -1,11 +1,12 @@
 <script lang="ts">
   let isFlipped = $state(false);
 
-  const { title = '', subtitle = '', description = '', imageUrl = '' } = $props<{
+  const { title = '', subtitle = '', description = '', imageUrl = '',side = 'left' } = $props<{
     title?: string;
     subtitle?: string;
     description?: string;
     imageUrl?: string;
+    side?: 'left' | 'right';
   }>();
 
   function handleClick() {
@@ -19,11 +20,13 @@
       <p>{description}</p>
     </div>
   </div>
-  <div class="card-front">
+
+  <div class="card-front" data-side={side}>
     {#if imageUrl}
-      <img src={imageUrl} alt={title} class="card-image" />
+      <img src={imageUrl} alt={title} class="card-image" data-side={side} />
     {/if}
-    <div class="card-content">
+
+    <div class="card-content" data-side={side}  >
       <h3 class="card-label">{title}</h3>
       <h2 class="card-title">{subtitle}</h2>
     </div>
@@ -41,34 +44,40 @@
     background: transparent;
     padding: 0;
     perspective: 1000px;
-    transform-style: preserve-3d;
   }
 
-  .card-back {
-    position: absolute;
-    inset: 0;
-    background: var(--brand-800);
-    border-radius: var(--radius-xl);
+  .card-back,
+  .card-front {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius-xl);
+  backface-visibility: hidden;
+  transition: transform 0.8s ease;
+  }
+
+  .card-back {  
+    background: var(--brand-800);  
     display: flex;
     align-items: center;
     justify-content: center;
     padding: var(--spacing-10);
     box-sizing: border-box;
-    z-index: 1;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
     transform: rotateY(180deg);
-    transition: transform 1s ease;
   }
 
   .card.flipped .card-back {
     transform: rotateY(0deg);
   }
 
-  .card-description {
-    width: 100%;
-    text-align: left;
+  .card-front {
+    background: var(--brand-600);
   }
+
+  .card.flipped .card-front {
+    transform: rotateY(180deg);
+  }
+
+
 
   .card-description p {
     font-family: var(--font-primary);
@@ -77,45 +86,49 @@
     color: var(--color-content-primary);
     line-height: 1.5;
     margin: 0;
-  }
-
-  .card-front {
-    position: absolute;
-    inset: 0;
-    background: var(--brand-600);
-    border-radius: var(--radius-xl);
-    padding: 0;
-    box-sizing: border-box;
-    z-index: 2;
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transition: transform 1s ease;
-  }
-
-  .card.flipped .card-front {
-    transform: rotateY(180deg);
+    text-align: left;
   }
 
   .card-image {
     position: absolute;
-    width: 50%;
-    height: 100%;
+    top: 50%;
+    width: auto;
+    height: 75%;
     object-fit: contain;
     pointer-events: none;
-    top: 0;
-    left: 0;
+    backface-visibility: hidden;
+    z-index: 1;
+  }
+
+  /* POSIZIONE IMMAGINE SINISTRA / DESTRA */
+  .card-image[data-side="left"] {
+  left: 0.5%;
+  transform: translateY(-50%) rotate(20deg) scale(1.25);
+  }
+
+  .card-image[data-side="right"] {
+  right: 0.5%;
+  transform: translateY(-50%) rotate(-20deg) scale(1.25);
   }
   
 
   .card-content {
     position: absolute;
     bottom: var(--spacing-6);
-    right: var(--spacing-6);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-2);
-    align-items: flex-end;
     z-index: 3;
+  }
+
+  .card-content[data-side="left"] {
+  right: var(--spacing-6);
+  text-align: right;
+  }
+
+  .card-content[data-side="right"] {
+  left: var(--spacing-6);
+  text-align: left;
   }
 
   .card-label {
@@ -124,7 +137,6 @@
     font-size: 32px;
     color: black;
     margin: 0;
-    white-space: nowrap;
   }
 
   .card-title {
@@ -134,6 +146,5 @@
     color: black;
     margin: 0;
     line-height: 1;
-    white-space: nowrap;
   }
 </style>
