@@ -134,8 +134,8 @@
   .card-label {
     font-family: var(--font-secondary);
     font-weight: 700;
-    font-size: 32px;
-    color: black;
+    font-size: var(--unit-48);
+    color: var(--color-background-primary);
     margin: 0;
   }
 
@@ -143,7 +143,7 @@
     font-family: var(--font-secondary);
     font-weight: 700;
     font-size: var(--unit-64);
-    color: black;
+    color: var(--color-background-primary);
     margin: 0;
     line-height: 1;
   }

@@ -39,7 +39,7 @@
   .logo {
     font-family: var(--font-primary);
     font-weight: 700;
-    font-size: 24px;
+    font-size: var(--unit-24);
     color: var(--color-content-primary);
     white-space: nowrap;
     padding: var(--spacing-7) var(--spacing-10);
@@ -54,7 +54,7 @@
   .nav-link {
     font-family: var(--font-primary);
     font-weight: 700;
-    font-size: 24px;
+    font-size: var(--unit-24);
     color: var(--color-link-default);
     text-decoration: none;
     padding: var(--spacing-2) var(--spacing-6);
@@ -73,10 +73,10 @@
 
   .nav-link.active {
     background: var(--brand-600);
-    color: white;
+    color: var(--color-link-default);
     border-radius: var(--radius-xl);
     padding: var(--spacing-2) var(--spacing-6);
-    animation: slideIn 0.3s ease;
+    animation: slideIn 0.5s ease;
   }
 
   @keyframes slideIn {
@@ -87,4 +87,5 @@
       opacity: 1;
     }
   }
+
 </style>
