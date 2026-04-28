@@ -10,6 +10,8 @@
 
     /* Unit Scale */
     --unit-24: 24px;
+    --unit-32: 32px;
+    --unit-40: 40px;
     --unit-48: 48px;
     --unit-64: 64px;
     --unit-72: 72px;
@@ -20,10 +22,17 @@
     --spacing-0: 0px;
     --spacing-1: 4px;
     --spacing-2: 8px;
+    --spacing-4: 16px;
+    --spacing-5: 24px;
     --spacing-6: 32px;
     --spacing-7: 40px;
+    --spacing-8: 48px;
+    --spacing-9: 64px;
     --spacing-10: 80px;
+    --spacing-11: 160px;
     --unit-24: 24px;
+    --unit-32: 32px;
+    --unit-40: 40px;
     --unit-48: 48px;
     --unit-64: 64px;
     --unit-72: 72px;

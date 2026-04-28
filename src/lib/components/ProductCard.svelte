@@ -147,4 +147,31 @@
     margin: 0;
     line-height: 1;
   }
+
+
+  @media (max-width: 744px) {
+
+  /* Card fluida ma con proporzioni originali */
+  .card {
+    width: 100%;
+    max-width: calc(100% - 48px); /* 24px per lato */
+    aspect-ratio: 664 / 389; /* proporzioni originali */
+    height: auto; /* ora è sicuro */
+    margin: 0 auto;
+  }
+
+  /* Immagine ridotta ma non deformata */
+  .card-image {
+    height: 65%;
+    transform: translateY(-50%) scale(1.1);
+  }
+
+    /* Spazi più coerenti */
+  .card-content {
+    bottom: var(--spacing-6);
+    gap: var(--spacing-1);
+  }
+}
+
+
 </style>

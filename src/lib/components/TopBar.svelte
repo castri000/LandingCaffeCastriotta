@@ -88,4 +88,41 @@
     }
   }
 
+@media (max-width: 744px){
+
+  /* La topbar crea lo spazio laterale */
+  .topbar {
+    padding: var(--spacing-6) var(--spacing-6);
+  }
+
+  /* Il logo NON aggiunge spazio extra */
+  .logo {
+    font-size: var(--unit-20);
+    padding: 0;
+  }
+
+  /* I link NON devono aggiungere spazio a destra */
+  .nav-link {
+    font-size: var(--unit-18);
+
+    padding-left: var(--spacing-2);   /* tieni lo spazio a sinistra */
+    padding-right: 0;                 /* ❗ togli lo spazio a destra */
+    padding-top: var(--spacing-1);
+    padding-bottom: var(--spacing-1);
+  }
+
+  .nav-link.active {
+    padding-left: var(--spacing-2);
+    padding-right: 0;                 /* ❗ anche quando è attivo */
+    padding-top: var(--spacing-1);
+    padding-bottom: var(--spacing-1);
+  }
+
+  .nav-links {
+    gap: var(--spacing-6);
+  }
+}
+
+
+
 </style>

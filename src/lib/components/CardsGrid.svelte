@@ -36,4 +36,21 @@
     width: 100%;
     box-sizing: border-box;
   }
+
+  @media (max-width: 744px) {
+
+  .cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-6);
+
+    /* RISOLVE IL PROBLEMA DEI BORDI */
+    max-width: calc(100% - 48px); /* 24px per lato */
+    margin: 0 auto;
+
+    /* SPAZIO INTERNO COERENTE */
+    padding: var(--spacing-6) 0;
+  }
+}
+
 </style>

@@ -69,4 +69,47 @@
   .image-content {
     flex: 0 0 auto;
   }
+
+
+  @media (max-width: 744px) {
+
+  .text-image-section {
+    flex-direction: column;
+    padding: var(--spacing-7) var(--spacing-10);
+    gap: var(--spacing-10);
+    text-align: left;
+
+    /* QUESTA È LA PARTE CHE RISOLVE IL PROBLEMA */
+    max-width: calc(100% - 32px); /* 16px per lato */
+    margin: 0 auto;
+  }
+
+  .text-content {
+    width: 100%;
+    max-width: 620px;
+    margin: 0 auto;
+    gap: var(--spacing-5);
+  }
+
+  .section-heading {
+    font-size: var(--unit-48);
+  }
+
+  .section-subheading {
+    font-size: var(--unit-40);
+  }
+
+  .section-description {
+    font-size: var(--unit-20);
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: justify;
+  }
+
+  .image-content {
+    display: none;
+  }
+}
+
+
 </style>
