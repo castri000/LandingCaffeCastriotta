@@ -31,7 +31,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--spacing/6) var(--spacing/10);
+    padding: var(--spacing-6) var(--spacing-10);
     width: 100%;
     box-sizing: border-box;
   }
