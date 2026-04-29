@@ -37,6 +37,8 @@
     box-sizing: border-box;
   }
 
+
+  /* RESPONSIVE TABLET */
   @media (max-width: 744px) {
 
   .cards-grid {
@@ -52,5 +54,10 @@
     padding: var(--spacing-6) 0;
   }
 }
+
+
+
+
+
 
 </style>

@@ -49,7 +49,7 @@
 
 <div class="page-container">
   <TopBar />
-  <Header title="titolo" videoUrl="/video/video caffe 3.mp4"/>
+  <Header videoUrl="/video/video caffe 3.mp4"/>
   
   <TextImageSection
     heading="L'ARTE DEL CAFFÈ"

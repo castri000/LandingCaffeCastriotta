@@ -71,16 +71,17 @@
   }
 
 
+  /* RESPONSIVE TABLET */
   @media (max-width: 744px) {
 
   .text-image-section {
     flex-direction: column;
-    padding: var(--spacing-7) var(--spacing-10);
-    gap: var(--spacing-10);
+    padding: var(--spacing-6) var(--spacing-6);
+    gap: var(--spacing-6);
     text-align: left;
 
     /* QUESTA È LA PARTE CHE RISOLVE IL PROBLEMA */
-    max-width: calc(100% - 32px); /* 16px per lato */
+    max-width: calc(100% - 48px); /* 16px per lato */
     margin: 0 auto;
   }
 
@@ -110,6 +111,48 @@
     display: none;
   }
 }
+
+
+  /* RESPONSIVE MOBILE */
+  @media (max-width: 402px) {
+
+  .text-image-section {
+    flex-direction: column;
+    padding: var(--spacing-4) var(--spacing-5); /* molto più compatto */
+    gap: var(--spacing-4); /* come nel Figma */
+    max-width: calc(100% - 24px);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .text-content {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: var(--spacing-3);
+  }
+
+  .section-heading {
+    font-size: var(--unit-32);
+  }
+
+  .section-subheading {
+    font-size: var(--unit-24);
+  }
+
+  .section-description {
+    font-size: var(--unit-16);
+    line-height: 1.4;
+    text-align: justify;
+  }
+
+  .image-content {
+    display: none; /* già fatto, ma lo confermo */
+  }
+}
+
+
+
 
 
 </style>

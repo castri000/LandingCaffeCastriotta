@@ -31,6 +31,7 @@
   }
 
 
+  /* RESPONSIVE TABLET */
   @media (max-width: 744px) {
 
   .quote-section {
@@ -54,6 +55,13 @@
     text-align: center;
   }
 }
+
+
+/* RESPONSIVE MOBILE */
+
+
+
+
 
 
 </style>

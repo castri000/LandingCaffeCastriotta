@@ -148,30 +148,73 @@
     line-height: 1;
   }
 
-
+  
+  
+  /* RESPONSIVE TABLET */
   @media (max-width: 744px) {
 
-  /* Card fluida ma con proporzioni originali */
   .card {
     width: 100%;
     max-width: calc(100% - 48px); /* 24px per lato */
     aspect-ratio: 664 / 389; /* proporzioni originali */
-    height: auto; /* ora è sicuro */
+    height: auto;
     margin: 0 auto;
   }
 
-  /* Immagine ridotta ma non deformata */
   .card-image {
     height: 65%;
     transform: translateY(-50%) scale(1.1);
   }
 
-    /* Spazi più coerenti */
   .card-content {
     bottom: var(--spacing-6);
     gap: var(--spacing-1);
   }
 }
+
+
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 403px) {
+
+  .card-content {
+    bottom: var(--spacing-4);
+    gap: var(--spacing-1);
+  }
+
+  .card-content[data-side="left"] {
+  right: var(--spacing-4);
+  text-align: right;
+  }
+
+  .card-content[data-side="right"] {
+  left: var(--spacing-4);
+  text-align: left;
+  }
+
+  .card-label {
+    font-size: var(--unit-24);
+  }
+
+  .card-title {
+    font-size: var(--unit-32);
+  }
+
+  .card-back {
+    padding: var(--spacing-7);
+  }
+
+  .card-description p {
+    font-size: var(--unit-12);
+    line-height: 1.5;
+    font-weight: 100;
+  }
+}
+
+
+
+
+
 
 
 </style>
